@@ -33,7 +33,6 @@ All notable changes to Kiosk Satellite are documented here. Full release notes f
 
 ### Changed
 - **Talk right after the wake word only applies to Assist pipelines.** With it on, a realtime conversation skipped the wake sound and sent what was said right after the wake word, which could carry the end of the wake word along ("So, what time is it?"). Realtime conversations now always start after the wake sound when Play chimes is on.
-- **Amazon's wake word engine is no longer offered.** The Amazon option is gone from Wake word engine on the Echo Dot, Echo Show 5 and Echo Show 8 images, along with the Wake word language setting. A kiosk that used it moves to vsWakeWord with the Alexa wake word on its first start after the update, and the selects in Home Assistant follow.
 
 ### Fixed
 - **Wake word arbitration works after a boot without Wi-Fi.** If the app started before Wi-Fi had an address, as an Echo Dot can after a reboot, the first arbitration message failed and closed UDP port 2330 until the app restarted. The kiosk still answered its wake word, but if it and another kiosk both heard it, both could answer. The port now opens again 5 seconds after it closes, and the other kiosks hear from this one again.

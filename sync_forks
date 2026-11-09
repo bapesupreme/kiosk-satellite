@@ -1,0 +1,23 @@
+SYNC FORKS (PowerShell)
+Run each block separately. If a merge shows conflicts, do NOT push.
+
+1) lineageos-echo-kiosk-satellite
+
+cd C:XXX\lineageos-echo-kiosk-satellite
+git fetch upstream
+git merge upstream/main
+git push origin HEAD
+
+After syncing: check that common\pryon\ still exists.
+
+
+2) kiosk-satellite
+
+cd C:\XXX\kiosk-satellite
+git fetch upstream
+git merge upstream/main
+git push origin HEAD
+
+
+Web alternative: fork page > Sync fork > Update branch.
+Never click "Discard commits" (it deletes the Amazon revert).
